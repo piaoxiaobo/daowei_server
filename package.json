@@ -1,0 +1,20 @@
+{
+  "name": "daowei_server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "moment": "^2.21.0",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.17.1",
+    "request": "^2.83.0",
+    "serve-favicon": "~2.4.5"
+  }
+}

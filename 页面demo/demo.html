@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+
+    <script src="jquery1.42.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                type:"GET",
+                url:"http://localhost:3000/service",
+                dataType:"json",
+                success:function(data) {
+                    for(var i = 0; i<data.serve1.length; i++){
+                        $(".xbsj1").append("<li class='test'><img src="+data.serve1[i].imgUrl+" ><p>"+data.serve1[i].name+"</p><span>"+data.serve1[i].price+"</span></li>");
+                        $(".xbsj2").append("<li class='test'><img src="+data.serve2[i].imgUrl+" ><p>"+data.serve2[i].name+"</p><span>"+data.serve2[i].price+"</span></li>");
+                    }
+                },
+                error:function(data){
+                    alert("您请求数据失败了，请检查您的请求格式以及地址！");
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <ul class="xbsj1"></ul>
+    <hr>
+    <ul class="xbsj2"></ul>
+</body>
+</html>
